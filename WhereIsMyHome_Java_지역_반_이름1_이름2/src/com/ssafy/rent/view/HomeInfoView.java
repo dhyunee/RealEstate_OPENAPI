@@ -98,7 +98,7 @@ public class HomeInfoView {
 		} else {
 			icon = new ImageIcon("img/다세대주택.jpg");
 		}
-
+//
 		imgL.setIcon(icon);
 
 //		Image img = null;
