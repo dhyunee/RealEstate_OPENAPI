@@ -34,6 +34,7 @@ public class APTDealSAXHandler extends DefaultHandler {
 		}
 	}
 
+//
 	public void endElement(String uri, String localName, String qName) {
 		if (qName.equals("지역코드")) {
 			home.setCode(Integer.parseInt(temp));
