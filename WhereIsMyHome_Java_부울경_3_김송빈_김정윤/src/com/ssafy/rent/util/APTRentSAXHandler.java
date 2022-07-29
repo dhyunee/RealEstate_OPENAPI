@@ -41,20 +41,17 @@ public class APTRentSAXHandler extends DefaultHandler {
 		} else if (qName.equals("법정동")) {
 			home.setDong(temp.trim());
 		} else if (qName.equals("보증금액")) {
-			// complete code #05
-			// 보증금액 항목을 처리하세요.
+			home.setRentMoney(temp);
 		} else if (qName.equals("월세금액")) {
 			home.setRentMoney(temp);
 		} else if (qName.equals("건축년도")) {
-			// complete code #06
-			// 건축년도 항목을 처리하세요.
+			home.setBuildYear(Integer.parseInt(temp));
 		} else if (qName.equals("년")) {
 			home.setDealYear(Integer.parseInt(temp));
 		} else if (qName.equals("월")) {
 			home.setDealMonth(Integer.parseInt(temp));
 		} else if (qName.equals("일")) {
-			// complete code #07;
-			// 일 항목을 처리하세요.
+			home.setDealMonth(Integer.parseInt(temp));
 		} else if (qName.equals("전용면적")) {
 			home.setArea(Double.parseDouble(temp));
 		} else if (qName.equals("지번")) {
