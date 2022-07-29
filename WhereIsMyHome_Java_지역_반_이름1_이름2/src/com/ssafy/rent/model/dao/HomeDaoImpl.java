@@ -81,14 +81,20 @@ public class HomeDaoImpl implements HomeDao {
 	 */
 	public HomeDeal search(int no) {
 		// complete code #03
-
-		for (HomeDeal h : search) {
-			if (h.getNo() == no) {
-				return h;
-			}
-		}
 		// List<HomeDeal> search 로부터 no 에 해당하는 HomeDeal 정보를 검색하여 return 하도록 코드를 작성하세요.
 		// 해당하는 no 가 없을 경우 null 을 리턴하세요.
+		for (HomeDeal deal : search) {
+			if (deal.getNo() == no) {
+				String dong = deal.getDong();
+				String aptN = deal.getAptName();
+				HomeInfo setHome = homeInfo.get(dong + aptN);
+
+				if (setHome != null)
+					deal.setImg(setHome.getImg());
+
+				return deal;
+			}
+		}
 		return null;
 	}
 
